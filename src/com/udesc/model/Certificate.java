@@ -1,6 +1,7 @@
 package com.udesc.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import com.udesc.io.Viewable;
 
@@ -54,6 +55,11 @@ public class Certificate implements Viewable {
             "Data início | %s \n" +
             "Data fim    | %s \n",
             reason,
-            startedAt, finishedAt);
+            startedAt.format(
+                DateTimeFormatter
+                .ofPattern("dd/MM/yyyy HH:mm")),
+            finishedAt.format(
+                DateTimeFormatter
+                .ofPattern("dd/MM/yyyy HH:mm")));
     }
 }
