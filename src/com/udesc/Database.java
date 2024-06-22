@@ -34,7 +34,7 @@ public class Database {
             ));
 
             employee.getAbsences().add(new Absence(
-                "Férias de trabalho",
+                "Consulta médica",
                 LocalDateTime.parse("2024-01-02T00:00:00"),
                 LocalDateTime.parse("2024-01-06T00:00:00")
             ));
